@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Acorta enlaces y compártelos fácilmente."
+    />
+    <title>Acortador de enlaces</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">ENLACES MÁS SIMPLES</p>
+      <h1>Acorta tu enlace</h1>
+      <p class="description">
+        Pega una URL larga y obtén un enlace corto para compartir.
+      </p>
+
+      <form id="shortenForm">
+        <label for="urlInput">URL original</label>
+        <div class="input-row">
+          <input
+            id="urlInput"
+            name="url"
+            type="url"
+            placeholder="https://ejemplo.com/mi-enlace"
+            autocomplete="url"
+            required
+          />
+          <button id="submitButton" type="submit">Acortar enlace</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <section id="resultSection" class="result" aria-labelledby="resultTitle" hidden>
+        <h2 id="resultTitle">Tu enlace corto</h2>
+        <div class="result-row">
+          <a id="resultLink" href="#" target="_blank" rel="noopener noreferrer"></a>
+          <button id="copyButton" class="secondary-button" type="button">
+            Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
